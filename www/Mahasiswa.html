@@ -10,11 +10,11 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $("#insert").click(function() {
-            var nip = $("#nip").val();
+            var nim = $("#nim").val();
             var nama = $("#nama").val();
-            var matakuliah = $("#matakuliah").val();
-            var dataString = "nip=" + nip + "&nama=" + nama + "&matakuliah=" + matakuliah + "&insert=";
-            if ($.trim(nip).length > 0 & $.trim(nama).length > 0 & $.trim(matakuliah).length > 0) {
+            var prodi = $("#prodi").val();
+            var dataString = "nim=" + nim + "&nama=" + nama + "&prodi=" + prodi + "&insert=";
+            if ($.trim(nim).length > 0 & $.trim(nama).length > 0 & $.trim(prodi).length > 0) {
                 $.ajax({
                     type: "POST",
                     url: "https://myakademik.xyz/insert-dosen.php",
@@ -57,17 +57,17 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Input <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                    <li><a href="mahasiswa.html">Input Mahasiswa</a></li>
-                    <li><a href="dosen.html">Input Dosen</a></li>
-                    <li><a href="matakuliah.html">Input Mata Kuliah</a></li>
+                    <li><a href="Mahasiswa.html">Input Mahasiswa</a></li>
+                    <li><a href="Nilai.html">Input Nilai</a></li>
+                    <li><a href="Matakuliah.html">Input Mata Kuliah</a></li>
                 </ul>
               </li>
               <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">List <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                        <li><a href="readjson-mahasiswa.html">List Mahasiswa</a></li>
-                        <li><a href="readjson-dosen.html">List Dosen</a></li>
-                        <li><a href="readjson-matakuliah.html">List Mata Kuliah</a></li>
+                        <li><a href="readjson-Mahasiswa.html">List Mahasiswa</a></li>
+                        <li><a href="readjson-Nilai.html">List Nilai</a></li>
+                        <li><a href="readjson-Matakuliah.html">List Mata Kuliah</a></li>
               </ul>
             </li>
             </ul>
@@ -79,23 +79,23 @@
     <div class="list">
         <input type="hidden" id="id" value="" />
         <div class="item">
-            <label>NIP</label>
-            <input type="text" id="nip" value="" />
+            <label>NIM</label>
+            <input type="text" id="nim" value="" />
         </div>
         <div class="item">
             <label>Nama</label>
             <input type="text" id="nama" value="" />
         </div>
         <div class="item">
-            <label>Mata Kuliah</label>
-            <input type="text" id="matakuliah" value="" />
+            <label>Prodi</label>
+            <input type="text" id="prodi" value="" />
         </div>
         <div class="item">
             <input type="button" id="insert" class="btn btn-success btn-block" value="Insert" />
         </div>
 
         <div class="item">
-            <a href="readjson-dosen.html"><input type="button" class="btn btn-info btn pull-right" value="Lihat List Dosen" /></a>
+            <a href="readjson-Mahasiswa.html"><input type="button" class="btn btn-info btn pull-right" value="Lihat Mahasiswa" /></a>
         </div>
     </div>
 </body>
